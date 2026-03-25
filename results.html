@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SavrChef - Recipe Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" class="logo-link">SavrChef</a></h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="search-info">
+                <h2>Recipe Results</h2>
+                <div class="search-details">
+                    <p>Found recipes for: <span id="searchIngredients"></span></p>
+                    <p>Meal type: <span id="searchMealType">All meals</span></p>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner"></div>
+                    <p>Finding perfect recipes for you...</p>
+                </div>
+                
+                <div class="recipes-grid" id="recipesGrid">
+                    <!-- Recipe cards will be populated here -->
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <h3>No recipes found</h3>
+                    <p>Try adding more ingredients or changing your meal type.</p>
+                    <button id="tryAgainBtn" class="try-again-btn">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="results.js"></script>
+</body>
+</html> 

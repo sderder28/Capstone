@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Recipe - SavrChef</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html" class="logo-link">SavrChef</a></h1>
+            <nav class="header-nav">
+                <a href="view-recipes.php" class="view-recipes-link">View Recipes</a>
+                <a href="index.html" class="back-to-home-link">Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="submit-recipe-card">
+            <h2>Submit a Recipe</h2>
+            <p class="subtitle">Share your culinary creations with the world!</p>
+            
+            <form id="recipeForm">
+                <!-- Recipe Name -->
+                <div class="form-group">
+                    <label for="recipeName">Recipe Name</label>
+                    <input type="text" id="recipeName" name="recipeName" placeholder="e.g., Grandma's Famous Lasagna" required>
+                </div>
+
+                <!-- Meal Type -->
+                <div class="form-group">
+                    <label for="mealType">Meal Type</label>
+                    <select id="mealType" name="mealType" required>
+                        <option value="">All meals</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snack">Snack</option>
+                        <option value="dessert">Dessert</option>
+                    </select>
+                </div>
+
+                <!-- Ingredients -->
+                <div class="form-group">
+                    <label for="ingredientInput">Add Ingredients</label>
+                    <div class="ingredient-input-container">
+                        <input type="text" id="ingredientInput" placeholder="Type an ingredient and select it...">
+                        <div id="suggestions" class="suggestions-dropdown"></div>
+                        <div class="ingredients-tags" id="ingredientsTags"></div>
+                    </div>
+                </div>
+
+                <!-- Preparation Steps -->
+                <div class="form-group">
+                    <label for="preparationSteps">Preparation Steps</label>
+                    <textarea id="preparationSteps" name="preparationSteps" rows="8" placeholder="1. Preheat oven to 375°F (190°C).&#10;2. Cook the noodles according to package directions.&#10;3. ..." required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn">Submit Recipe</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="24" r="24" fill="#4CAF50"/>
+                    <path d="M20 32L12 24L14.83 21.17L20 26.34L33.17 13.17L36 16L20 32Z" fill="white"/>
+                </svg>
+            </div>
+            <h3>Recipe Submitted!</h3>
+            <p>Thank you for your contribution. Your recipe is now saved and will be reviewed shortly.</p>
+            <button id="addAnotherBtn">Add Another Recipe</button>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="submit-recipe.js"></script>
+</body>
+</html> 

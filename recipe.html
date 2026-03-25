@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SavrChef - Recipe Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" class="logo-link">SavrChef</a></h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <button id="backBtn" class="small-back-button">← Back to Results</button>
+            <div class="recipe-details" id="recipeDetails">
+                <!-- Recipe content will be populated here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Substitution Modal -->
+    <div class="modal-overlay" id="substitutionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Ingredient Substitution</h3>
+                <button class="close-modal" id="closeModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="original-ingredient">
+                    <h4>Missing Ingredient:</h4>
+                    <p id="missingIngredient"></p>
+                </div>
+                <div class="substitutions">
+                    <h4>Possible Substitutions:</h4>
+                    <div id="substitutionList">
+                        <!-- Substitutions will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="recipe.js"></script>
+</body>
+</html> 
